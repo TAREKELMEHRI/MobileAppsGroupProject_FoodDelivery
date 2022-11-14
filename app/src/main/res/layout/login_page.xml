@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gwublue"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/homeIcon"
+            android:layout_width="90dp"
+            android:layout_height="55dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="62dp"
+            android:paddingBottom="15dp"
+            android:src="@drawable/home_icon_svg"
+            android:onClick="goHome"/>
+
+        <TextView
+            android:id="@+id/GWtext"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="0dp"
+            android:text="GW"
+            android:textColor="@color/gwublue"
+            android:textSize="60sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/GWdelivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="58dp"
+            android:text="DELIVERY"
+            android:textColor="@color/gwublue"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/cartIcon"
+            android:layout_width="90dp"
+            android:layout_height="55dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="60dp"
+            android:paddingBottom="10dp"
+            android:src="@drawable/shopping_cart"
+            android:onClick="goToCart" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_margin="0dp"
+        android:background="@color/gwulightgold">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/pageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_alignLeft="@id/GWIDedit"
+            android:text="LOG IN"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/GWIDtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pageTitle"
+            android:layout_alignLeft="@id/GWIDedit"
+            android:layout_marginTop="20dp"
+            android:text="GW ID"
+            android:textSize="18sp"
+            android:textColor="@color/white" />
+
+        <EditText
+            android:id="@+id/GWIDedit"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/GWIDtitle"
+            android:ems="10"
+            android:inputType="text"
+            android:background="@color/gwufieldblue"
+            android:alpha="0.5" />
+
+        <TextView
+            android:id="@+id/userPassTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/GWIDedit"
+            android:layout_alignLeft="@id/userPasswordedit"
+            android:layout_marginTop="20dp"
+            android:text="PASSWORD"
+            android:textSize="18sp"
+            android:textColor="@color/white" />
+
+        <EditText
+            android:id="@+id/userPasswordedit"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/userPassTitle"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:background="@color/gwufieldblue"
+            android:alpha="0.5" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="180dp"
+            android:layout_height="47dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/userPasswordedit"
+            android:layout_marginTop="40dp"
+            android:text="LOG IN"
+            android:textColor="@color/gwublue"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:background="@drawable/round_button"
+            app:backgroundTint="@color/white" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button"
+            android:layout_marginTop="5dp"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:id="@+id/createAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/create_account_str"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="10sp"/>
+
+            <TextView
+                android:id="@+id/linkSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/createAccount"
+                android:paddingLeft="5dp"
+                android:text="SIGN UP"
+                android:textColor="@color/gwulightgold"
+                android:textStyle="bold"
+                android:textSize="10sp" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/gwuLogoLogin"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            app:srcCompat="@drawable/gw_primary_2c_rev" />
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

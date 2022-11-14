@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gwublue"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/homeIcon"
+            android:layout_width="90dp"
+            android:layout_height="55dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="62dp"
+            android:paddingBottom="15dp"
+            android:src="@drawable/home_icon_svg"
+            android:onClick="goHome" />
+
+        <TextView
+            android:id="@+id/GWtext"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="0dp"
+            android:text="GW"
+            android:textColor="@color/gwublue"
+            android:textSize="60sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/GWdelivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="58dp"
+            android:text="DELIVERY"
+            android:textColor="@color/gwublue"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/cartIcon"
+            android:layout_width="90dp"
+            android:layout_height="55dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="60dp"
+            android:paddingBottom="10dp"
+            android:src="@drawable/shopping_cart"
+            android:onClick="goToCart" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_margin="0dp"
+        android:background="@color/gwulightgold">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/pageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_centerHorizontal="true"
+            android:text="ADD PAYMENT METHOD"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/NameonCardtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pageTitle"
+            android:layout_alignLeft="@id/NameonCardentry"
+            android:layout_marginTop="20dp"
+            android:text="NAME ON CARD"
+            android:textSize="18sp"
+            android:textColor="@color/white" />
+
+        <EditText
+            android:id="@+id/NameonCardentry"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/NameonCardtitle"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:background="@color/gwufieldblue"
+            android:alpha="0.5" />
+
+        <TextView
+            android:id="@+id/cardNumbertitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/NameonCardentry"
+            android:layout_alignLeft="@id/cardNumberEntry"
+            android:layout_marginTop="20dp"
+            android:text="CARD NUMBER"
+            android:textSize="18sp"
+            android:textColor="@color/white" />
+
+        <EditText
+            android:id="@+id/cardNumberEntry"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/cardNumbertitle"
+            android:ems="10"
+            android:inputType="number"
+            android:background="@color/gwufieldblue"
+            android:alpha="0.5" />
+
+        <RelativeLayout
+            android:id="@+id/expirationCVClayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cardNumberEntry"
+            android:layout_alignStart="@id/cardNumberEntry"
+            android:layout_alignEnd="@id/cardNumberEntry"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/expirationDatetitle"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/expirationDateEntry"
+                android:layout_marginTop="20dp"
+                android:text="EXPIRATION DATE"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/expirationDateEntry"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/expirationDatetitle"
+                android:alpha="0.5"
+                android:background="@color/gwufieldblue"
+                android:ems="10"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/creditCardCVCtitle"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/expirationDatetitle"
+                android:text="CVC"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/creditCardCVCentry"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/creditCardCVCtitle"
+                android:layout_alignLeft="@id/creditCardCVCtitle"
+                android:layout_toRightOf="@id/expirationDateEntry"
+                android:alpha="0.5"
+                android:background="@color/gwufieldblue"
+                android:ems="10"
+                android:inputType="number" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/buttonSignUp"
+            android:layout_width="180dp"
+            android:layout_height="47dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/expirationCVClayout"
+            android:layout_marginTop="40dp"
+            android:text="ADD CARD"
+            android:textColor="@color/gwublue"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:background="@drawable/round_button"
+            app:backgroundTint="@color/white" />
+
+        <ImageView
+            android:id="@+id/gwuLogoLogin"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            app:srcCompat="@drawable/gw_primary_2c_rev" />
+
+    </RelativeLayout>
+
+</LinearLayout>

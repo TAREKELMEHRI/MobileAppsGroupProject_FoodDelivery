@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">GroupProject_FoodDelivery</string>
+    <string name="create_account_str">Don\'t Have an Account?</string>
+    <string name="restaurant_name">Restaurant Name</string>
+    <string name="orderItem1quantity">1</string>
+    <string name="orderItem1name">Carne Asada</string>
+    <string name="orderItem1price">$18.95</string>
+    <string name="orderItem2quantity">3</string>
+    <string name="orderItem2name">Refried Beans</string>
+    <string name="orderItem2price">$8.65</string>
+    <string name="orderItem3quantity">1</string>
+    <string name="orderItem3name">Chicken Quesadilla</string>
+    <string name="orderItem3price">$11.95</string>
+    <string name="orderItem4quantity">2</string>
+    <string name="orderItem4name">Platanos Fritos</string>
+    <string name="orderItem4price">$13.90</string>
+    <string name="orderNumber">#1980394</string>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gwublue">#003B5C</color>
+    <color name="gwugold">#A89968</color>
+    <color name="gwufieldblue">#517F94</color>
+    <color name="gwulightgold">#C7BE9E</color>
+    <color name="gwured">#C8102E</color>
+    <color name="gwugreen">#78BE20</color>
+</resources>
