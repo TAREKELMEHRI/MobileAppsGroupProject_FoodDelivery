@@ -25,5 +25,11 @@ public class LogInActivity extends Activity {
         startActivity(intent);
     }
 
+    public void goToRestaurants(View view){
+        Intent intent=new Intent(LogInActivity.this, RestaurantsListActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
+    }
+
 }
 

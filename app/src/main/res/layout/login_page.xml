@@ -75,7 +75,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            android:layout_alignLeft="@id/GWIDedit"
+            android:layout_alignLeft="@id/GWIDUsernameEdit"
             android:text="LOG IN"
             android:textColor="@color/white"
             android:textSize="30sp"
@@ -86,14 +86,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/pageTitle"
-            android:layout_alignLeft="@id/GWIDedit"
+            android:layout_alignLeft="@id/GWIDUsernameEdit"
             android:layout_marginTop="20dp"
             android:text="GW ID"
             android:textSize="18sp"
             android:textColor="@color/white" />
 
         <EditText
-            android:id="@+id/GWIDedit"
+            android:id="@+id/GWIDUsernameEdit"
             android:layout_width="300dp"
             android:layout_height="30dp"
             android:layout_centerHorizontal="true"
@@ -107,7 +107,7 @@
             android:id="@+id/userPassTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/GWIDedit"
+            android:layout_below="@id/GWIDUsernameEdit"
             android:layout_alignLeft="@id/userPasswordedit"
             android:layout_marginTop="20dp"
             android:text="PASSWORD"
@@ -137,7 +137,8 @@
             android:textStyle="bold"
             android:textSize="20sp"
             android:background="@drawable/round_button"
-            app:backgroundTint="@color/white" />
+            app:backgroundTint="@color/white"
+            android:onClick="goToRestaurants"/>
 
         <RelativeLayout
             android:layout_width="wrap_content"

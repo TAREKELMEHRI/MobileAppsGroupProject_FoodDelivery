@@ -15,4 +15,16 @@
     <string name="orderItem4name">Platanos Fritos</string>
     <string name="orderItem4price">$13.90</string>
     <string name="orderNumber">#1980394</string>
+
+    <string-array name="spinner_numbers">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+
 </resources>

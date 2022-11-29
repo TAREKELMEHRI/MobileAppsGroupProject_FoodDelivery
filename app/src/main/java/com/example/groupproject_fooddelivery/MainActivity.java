@@ -44,4 +44,16 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void goToRestaurants(View view){
+        Intent intent=new Intent(MainActivity.this, RestaurantsListActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
+    }
+
+    public void goToMenu(View view){
+        Intent intent=new Intent(MainActivity.this, MenuListActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
+    }
+
 }

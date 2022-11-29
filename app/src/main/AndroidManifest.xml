@@ -30,6 +30,9 @@
         <activity android:name=".LogInActivity"></activity>
         <activity android:name=".SignUpActivity"></activity>
         <activity android:name=".MyCartActivity"></activity>
+        <activity android:name=".RestaurantsListActivity"></activity>
+        <activity android:name=".MenuListActivity"></activity>
+        <activity android:name=".PracticeAct"></activity>
     </application>
 
 </manifest>
