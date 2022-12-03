@@ -3,12 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="horizontal">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:id="@+id/clickImageLayout">
 
         <ImageView
             android:id="@+id/menuItemImage"
@@ -23,18 +24,18 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="40dp"
             android:layout_toRightOf="@id/menuItemImage"
+            android:gravity="center"
             android:text="Menu Item Name"
             android:textSize="20dp"
-            app:layout_constraintLeft_toLeftOf="@id/menuItemImage"
-            app:layout_constraintRight_toLeftOf="@id/spinnerItemQuantity" />
+            app:layout_constraintLeft_toLeftOf="@id/menuItemImage" />
 
         <TextView
             android:id="@+id/menuPriceDollarSign"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="65dp"
             android:layout_marginBottom="10dp"
             android:layout_alignBottom="@id/menuItemImage"
             android:layout_toRightOf="@id/menuItemImage"
@@ -52,13 +53,7 @@
             android:text="Item Price"
             android:textSize="20dp" />
 
-        <Spinner
-            android:id="@+id/spinnerItemQuantity"
-            android:layout_width="90dp"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_toRightOf="@+id/menuItemHomeName"
-            android:entries="@array/spinner_numbers" />
+
 
     </RelativeLayout>
 

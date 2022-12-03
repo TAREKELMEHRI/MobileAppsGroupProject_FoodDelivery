@@ -165,7 +165,8 @@
                 android:text="SIGN UP"
                 android:textColor="@color/gwulightgold"
                 android:textStyle="bold"
-                android:textSize="10sp" />
+                android:textSize="10sp"
+                android:onClick="signUp"/>
 
         </RelativeLayout>
 

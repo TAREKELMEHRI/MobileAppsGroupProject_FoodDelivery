@@ -19,4 +19,10 @@ public class SignUpActivity extends Activity {
         startActivity(intent);
     }
 
+    public void goHome(View view){
+        Intent intent=new Intent(SignUpActivity.this, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
+    }
+
 }
