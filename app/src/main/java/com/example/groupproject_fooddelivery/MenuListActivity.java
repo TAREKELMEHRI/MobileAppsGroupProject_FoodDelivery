@@ -32,13 +32,13 @@ public class MenuListActivity extends Activity {
 
         restaurantMenuView();
 
-        chosenRestaurantName = getIntent().getExtras().getString("object2");
+   //     chosenRestaurantName = getIntent().getExtras().getString("object2");
 
     }
 
-    public String passedArg() {
+ /*   public String passedArg() {
         return chosenRestaurantName;
-    }
+    }   */
 
     public void restaurantMenuView()  {
 
@@ -47,26 +47,27 @@ public class MenuListActivity extends Activity {
         restaurantMenuListView.setLayoutManager(linearLayoutManager);
 
         ArrayList<FoodDomain> menulist=new ArrayList<>();
-        MenuListActivity test = new MenuListActivity();
+     /*   MenuListActivity test = new MenuListActivity();
         test.passedArg();
         String passedArgVal = test.passedArg();
-        System.out.printf(passedArgVal);
+        System.out.printf(passedArgVal);        */
         updateRestaurantBanner=findViewById(R.id.restaurantNameMenuPage);
-        updateRestaurantBanner.setText(passedArgVal);
+     //   updateRestaurantBanner.setText(passedArgVal);
 
-   /*     if (passedArgVal != "&pizza") {
+     //   if (passedArgVal != "&pizza") {
             menulist.add(new FoodDomain("American Honey", 13.99, "_pizza_home"));
             menulist.add(new FoodDomain("Maverick", 13.99, "_pizza_home"));
             menulist.add(new FoodDomain("Simp", 13.99, "_pizza_home"));
-        }
-        else{
+    //    }
+    //    else{
             menulist.add(new FoodDomain("Chicken Tikka Masala", 18.95, "tajofindia_home"));
             menulist.add(new FoodDomain("Taj Karai", 18.95, "tajofindia_home"));
             menulist.add(new FoodDomain("Bengan Bhartha", 14.95, "tajofindia_home"));
             menulist.add(new FoodDomain("Proper Burger", 16.50, "dukesgrocery_home"));
             menulist.add(new FoodDomain("Truffle Mac & Cheese", 15.50, "dukesgrocery_home"));
             menulist.add(new FoodDomain("Fired Up Chicken", 16.50, "dukesgrocery_home"));
-        } */
+    //    }
+
         adapter2=new MenuListAdapter(menulist);
         restaurantMenuListView.setAdapter(adapter2);
 

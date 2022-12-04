@@ -66,13 +66,13 @@ public class RestaurantListAdapter extends RecyclerView.Adapter<RestaurantListAd
                 Intent intent = new Intent(holder.itemView.getContext(), MenuListActivity.class);
                 intent.putExtra("object", restaurantDomains.get(position));
 
-                if (restaurantDomains.get(position).getRestaurantName() == "&pizza") {
+            //    if (restaurantDomains.get(position).getRestaurantName() == "&pizza") {
                     intent.putExtra("object2", "&pizza");
-                } else if (restaurantDomains.get(position).getRestaurantName() == "tajofindia") {
+            /*    } else if (restaurantDomains.get(position).getRestaurantName() == "tajofindia") {
                     intent.putExtra("object2", "tajofindia");
                 } else {
                     intent.putExtra("object2", "dukesgrocery");
-                }
+                }   */
 
                 holder.itemView.getContext().startActivity(intent);
             }
