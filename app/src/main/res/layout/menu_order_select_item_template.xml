@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/homeIcon"
+            android:layout_width="90dp"
+            android:layout_height="55dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="62dp"
+            android:paddingBottom="15dp"
+            android:src="@drawable/home_icon_svg"
+            android:onClick="goHome"/>
+
+        <TextView
+            android:id="@+id/GWtext"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="0dp"
+            android:text="GW"
+            android:textColor="@color/gwublue"
+            android:textSize="60sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/GWdelivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="58dp"
+            android:text="DELIVERY"
+            android:textColor="@color/gwublue"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/cartIcon"
+            android:layout_width="90dp"
+            android:layout_height="55dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="60dp"
+            android:paddingBottom="10dp"
+            android:src="@drawable/shopping_cart"
+            android:onClick="goToCart" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/menuItemImage"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:padding="0dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            app:srcCompat="@drawable/dukesgrocery_home"/>
+
+        <TextView
+            android:id="@+id/menuItemHomeName"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/menuItemImage"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:text="Menu Item Name"
+            android:textSize="20dp"
+            app:layout_constraintLeft_toLeftOf="@id/menuItemImage"
+            app:layout_constraintRight_toLeftOf="@id/spinnerItemQuantity" />
+
+        <TextView
+            android:id="@+id/menuPriceDollarSign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@id/menuItemHomeName"
+            android:text="$"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/menuItemHomePrice"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/menuPriceDollarSign"
+            android:layout_below="@id/menuItemHomeName"
+            android:text="Item Price"
+            android:textSize="20dp" />
+
+        <Spinner
+            android:id="@+id/spinnerItemQuantity"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/menuItemHomePrice"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:entries="@array/spinner_numbers" />
+
+        <TextView
+            android:id="@+id/addToCart"
+            android:layout_width="180dp"
+            android:layout_height="47dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/spinnerItemQuantity"
+            android:layout_marginTop="40dp"
+            android:text="ADD TO CART"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="@drawable/round_button"
+            android:backgroundTint="@color/gwublue" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
