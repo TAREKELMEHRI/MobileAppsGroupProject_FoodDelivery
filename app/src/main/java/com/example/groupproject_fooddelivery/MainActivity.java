@@ -4,6 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -54,6 +59,28 @@ public class MainActivity extends AppCompatActivity {
         Intent intent=new Intent(MainActivity.this, MenuListActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(intent);
+    }
+
+    public void createRestuarantListings(){
+        List<RestuarantListing> restuarntList = new ArrayList<RestuarantListing>();
+
+        RestuarantListing restuarantListing = new RestuarantListing();
+        restuarantListing.setRestuarantName("&Pizza");
+        restuarantListing.setAddress("1234 Street st");
+        restuarantListing.setPicLink(null);
+
+        restuarntList.add(restuarantListing);
+
+        LinearLayout l = (LinearLayout) findViewById(R.id.linearLayout);
+
+        for(RestuarantListing s : restuarntList){
+            Button newButton = new Button(this);
+            newButton.setText(s.getRestuarantName());
+            newButton.setBackgroundColor(0xFF99D6D6);
+            l.addView(newButton);
+        }
+
+
     }
 
 }
