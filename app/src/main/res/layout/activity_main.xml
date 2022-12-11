@@ -105,7 +105,13 @@
 
 
     </RelativeLayout>
-
-
+//
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="knap"
+        android:id="@+id/knap"
+        android:background="#99D6D6"/>
+//
 
 </LinearLayout>

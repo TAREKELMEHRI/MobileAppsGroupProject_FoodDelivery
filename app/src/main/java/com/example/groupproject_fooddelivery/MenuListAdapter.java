@@ -122,4 +122,8 @@ public class MenuListAdapter extends RecyclerView.Adapter<MenuListAdapter.ViewHo
 
     }
 
+    public void createRestuarantList(){
+
+    }
+
 }
