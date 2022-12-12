@@ -25,4 +25,10 @@ public class GuestCheckoutActivity extends Activity {
         startActivity(intent);
     }
 
+    public void signUp(View view){
+        Intent intent=new Intent(GuestCheckoutActivity.this, SignUpActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
+    }
+
 }
