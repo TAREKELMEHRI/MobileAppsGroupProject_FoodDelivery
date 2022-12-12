@@ -61,26 +61,5 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void createRestuarantListings(){
-        List<RestuarantListing> restuarntList = new ArrayList<RestuarantListing>();
-
-        RestuarantListing restuarantListing = new RestuarantListing();
-        restuarantListing.setRestuarantName("&Pizza");
-        restuarantListing.setAddress("1234 Street st");
-        restuarantListing.setPicLink(null);
-
-        restuarntList.add(restuarantListing);
-
-        LinearLayout l = (LinearLayout) findViewById(R.id.linearLayout);
-
-        for(RestuarantListing s : restuarntList){
-            Button newButton = new Button(this);
-            newButton.setText(s.getRestuarantName());
-            newButton.setBackgroundColor(0xFF99D6D6);
-            l.addView(newButton);
-        }
-
-
-    }
 
 }

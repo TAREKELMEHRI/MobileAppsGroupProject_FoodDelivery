@@ -100,6 +100,7 @@
             android:layout_below="@id/GWIDtitle"
             android:ems="10"
             android:inputType="text"
+            android:textColor="@color/white"
             android:background="@color/gwufieldblue"
             android:alpha="0.5" />
 
@@ -122,6 +123,7 @@
             android:layout_below="@id/userPassTitle"
             android:ems="10"
             android:inputType="textPassword"
+            android:textColor="@color/white"
             android:background="@color/gwufieldblue"
             android:alpha="0.5" />
 
