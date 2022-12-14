@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/clickImageLayout">
+
+        <ImageView
+            android:id="@+id/selectedItemImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:padding="0dp"
+            android:layout_marginLeft="10dp"
+            app:srcCompat="@drawable/dukesgrocery_home"/>
+
+        <TextView
+            android:id="@+id/selectedItemHomeName"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/selectedItemImage"
+            android:text="Cart Item Name"
+            android:textSize="20dp"
+            app:layout_constraintLeft_toLeftOf="@id/selectedItemImage" />
+
+        <TextView
+            android:id="@+id/selectedPriceDollarSign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="65dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/selectedItemQuantity"
+            android:layout_toRightOf="@id/selectedItemImage"
+            android:text="$"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/selectedItemPrice"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/selectedItemQuantity"
+            android:layout_toRightOf="@id/selectedPriceDollarSign"
+            android:text="Item Price"
+            android:textSize="20dp" />
+        <TextView
+            android:id="@+id/selectedItemQuantity"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="220dp"
+            android:layout_marginBottom="20dp"
+            android:layout_below="@id/selectedItemHomeName"
+            android:layout_marginTop="20dp"
+            android:text="Item Quantity"
+            android:textSize="20dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

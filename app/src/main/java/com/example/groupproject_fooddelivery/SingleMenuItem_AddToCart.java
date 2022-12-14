@@ -6,17 +6,22 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+
+import java.util.List;
+
 
 public class SingleMenuItem_AddToCart extends Activity {
     public RelativeLayout clickImageLayout;
     public TextView menuItemHomeName, menuItemHomePrice, addToCart;
     public ImageView menuItemImage;
     public FoodDomain object;
+    public Spinner spinnerItemQuantity;
 
-    @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_order_select_item_template);
@@ -40,6 +45,10 @@ public class SingleMenuItem_AddToCart extends Activity {
             @Override
             public void onClick(View view) {
 
+                SingleToneClass singleToneClass = com.example.groupproject_fooddelivery.SingleToneClass.getInstance();
+                List<FoodDomain> orders = singleToneClass.getData();
+                orders.add(object);
+                singleToneClass.setData(orders);
             }
         });
 
@@ -48,6 +57,7 @@ public class SingleMenuItem_AddToCart extends Activity {
 
     public void initView() {
         addToCart = findViewById(R.id.addToCart);
+        spinnerItemQuantity = findViewById(R.id.spinnerItemQuantity);
         menuItemHomeName = findViewById(R.id.menuItemHomeName);
         clickImageLayout = findViewById(R.id.clickImageLayout);
         menuItemImage = findViewById(R.id.menuItemImage);
@@ -67,7 +77,11 @@ public class SingleMenuItem_AddToCart extends Activity {
         startActivity(intent);
     }
 
-
+    public void addToCart(View view){
+        Intent intent=new Intent(SingleMenuItem_AddToCart.this, MyCartActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
+    }
 
 
 }
