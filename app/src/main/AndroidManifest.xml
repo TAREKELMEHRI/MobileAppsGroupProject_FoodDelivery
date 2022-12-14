@@ -34,6 +34,7 @@
         <activity android:name=".MenuListActivity"></activity>
         <activity android:name=".PracticeAct"></activity>
         <activity android:name=".SingleMenuItem_AddToCart" android:exported="true"></activity>
+        <activity android:name=".OrderCheckoutActivity"></activity>
     </application>
 
 </manifest>

@@ -47,6 +47,7 @@ public class SingleMenuItem_AddToCart extends Activity {
 
                 SingleToneClass singleToneClass = com.example.groupproject_fooddelivery.SingleToneClass.getInstance();
                 List<FoodDomain> orders = singleToneClass.getData();
+                object.setNumberInCart(1);
                 orders.add(object);
                 singleToneClass.setData(orders);
             }

@@ -110,9 +110,9 @@
             android:textColor="@color/white"
             android:textStyle="bold"
             android:textSize="20sp"
-            android:background="@drawable/round_button"
-            app:backgroundTint="@color/gwublue"
-            android:onClick="goToRestaurants"/>
+            android:background="@color/gwublue"
+            app:backgroundTint="@color/teal_700"
+            android:onClick="checkout"/>
 
 
     </RelativeLayout>

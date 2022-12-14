@@ -29,7 +29,7 @@ public class MyCartActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.my_cart);
+        setContentView(R.layout.cart);
         getBundle();
     }
 
@@ -39,18 +39,24 @@ public class MyCartActivity extends Activity {
         startActivity(intent);
     }
 
+    public void checkout(View view){
+        Intent intent=new Intent(MyCartActivity.this, OrderCheckoutActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
+    }
 
-    private void setOrderVars(){
+
+    private String setOrderVars(){
         double totalCost = 0.00;
-        FoodDomain[] orders = new FoodDomain[0];
+        SingleToneClass singleToneClass = com.example.groupproject_fooddelivery.SingleToneClass.getInstance();
+        List<FoodDomain> orders = singleToneClass.getData();
+
         for (FoodDomain item: orders){
-            totalCost = totalCost + (item.numberInCart * item.foodPrice);
+            if (item.getNumberInCart() != 0){
+                totalCost = totalCost + (item.getNumberInCart() * item.getFoodPrice());
+            }
         }
-        double globalCostVar = totalCost;
-        byte[] array = new byte[7]; // length is bounded by 7
-        new Random().nextBytes(array);
-        String generatedString = new String(array, Charset.forName("UTF-8"));
-        String globalOrderId = generatedString;
+        return String.valueOf(totalCost);
     }
 
 
@@ -100,6 +106,10 @@ public class MyCartActivity extends Activity {
         for (FoodDomain item: orders){
             ordersList.add(item);
         }
+
+        String totalCost = setOrderVars();
+        TextView textView = findViewById(R.id.orderTotalValue);
+        textView.setText(totalCost);
 
         adapter2=new MyCartAdapter(ordersList);
         ordersListView.setAdapter(adapter2);
