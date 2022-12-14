@@ -38,18 +38,15 @@ public class RestaurantListAdapter extends RecyclerView.Adapter<RestaurantListAd
         switch (position) {
             case 0: {
                 picUrl = "_pizza_home";
-            //   holder.mainLayout.setBackground(ContextCompat.getDrawable(holder.itemView.getContext(), R.drawable.home_icon_svg));
                 break;
             }
             case 1: {
                 picUrl = "tajofindia_home";
-            //    holder.mainLayout.setBackground(ContextCompat.getDrawable(holder.itemView.getContext(), R.drawable.home_icon_svg));
                 break;
             }
 
             case 2: {
                 picUrl = "dukesgrocery_home";
-            //    holder.mainLayout.setBackground(ContextCompat.getDrawable(holder.itemView.getContext(), R.drawable.home_icon_svg));
                 break;
             }
 
@@ -65,14 +62,6 @@ public class RestaurantListAdapter extends RecyclerView.Adapter<RestaurantListAd
             public void onClick(View view) {
                 Intent intent = new Intent(holder.itemView.getContext(), MenuListActivity.class);
                 intent.putExtra("object", restaurantDomains.get(position));
-
-            //    if (restaurantDomains.get(position).getRestaurantName() == "&pizza") {
-                    intent.putExtra("object2", "&pizza");
-            /*    } else if (restaurantDomains.get(position).getRestaurantName() == "tajofindia") {
-                    intent.putExtra("object2", "tajofindia");
-                } else {
-                    intent.putExtra("object2", "dukesgrocery");
-                }   */
 
                 holder.itemView.getContext().startActivity(intent);
             }
